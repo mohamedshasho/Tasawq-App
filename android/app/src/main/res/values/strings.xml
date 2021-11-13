@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Tasawq</string>
+
+    <string name="facebook_app_id" translatable="false">599556687852430</string>
+    <string name="fb_login_protocol_scheme" translatable="false">fb599556687852430</string>
+
+
+</resources>

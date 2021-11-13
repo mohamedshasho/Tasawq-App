@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "867023669222",
+    "project_id": "tasawq-8c728",
+    "storage_bucket": "tasawq-8c728.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:867023669222:android:a4d2e777c139cc44eaf827",
+        "android_client_info": {
+          "package_name": "com.the.tasawq"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "867023669222-jr4inh22mjon9eq49gcrcv2i9l3p8cq0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.the.tasawq",
+            "certificate_hash": "919f71af71bb8b490e207387304e3084c31ebc85"
+          }
+        },
+        {
+          "client_id": "867023669222-d058cjgf7km35o4ohgojg7kl94e97aa4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEVWQZ-wQ7vQckwsAMfPA1E4Uo7m7vOmQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "867023669222-d058cjgf7km35o4ohgojg7kl94e97aa4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
