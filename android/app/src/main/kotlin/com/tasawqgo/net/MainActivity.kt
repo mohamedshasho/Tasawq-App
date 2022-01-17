@@ -1,4 +1,4 @@
-package com.the.tasawq
+package com.tasawqgo.net
 
 
 import io.flutter.embedding.android.FlutterActivity
