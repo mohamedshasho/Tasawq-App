@@ -141,7 +141,7 @@ class ProfileScreen extends StatelessWidget {
                             SizedBox(height: height * 0.01),
                             ContainerBn(
                               title: getTranslated(context, 'Followers'),
-                              color: Theme.of(context).buttonColor,
+                              color: Theme.of(context).colorScheme.surface,
                             ),
                           ],
                         ),
@@ -154,7 +154,7 @@ class ProfileScreen extends StatelessWidget {
                             SizedBox(height: height * 0.01),
                             ContainerBn(
                               title: getTranslated(context, 'Stores Following'),
-                              color: Theme.of(context).buttonColor,
+                              color: Theme.of(context).colorScheme.surface,
                             ),
                           ],
                         ),

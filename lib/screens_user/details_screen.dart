@@ -182,7 +182,7 @@ class DetailsScreen extends StatelessWidget {
               ),
               Center(
                 child: Btn(
-                  color: Theme.of(context).buttonColor,
+                  color: Theme.of(context).colorScheme.surface,
                   title: getTranslated(context, 'Show Store'),
                   onPressed: () {
                     Navigator.pushNamed(context, StoreDetails.id,

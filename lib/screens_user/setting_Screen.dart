@@ -17,7 +17,7 @@ import 'package:delivery_app/wedgets/set_map_lat_long.dart';
 import 'package:delivery_app/wedgets/theme_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:share/share.dart';
+import 'package:share_plus/share_plus.dart';
 
 import '../constants.dart';
 
@@ -71,7 +71,7 @@ class Setting extends StatelessWidget {
                         onPressed: () {
                           _showBottomSheetUsername(context);
                         },
-                        color: Theme.of(context).accentColor,
+                        color: Theme.of(context).colorScheme.secondary,
                         icon: const Icon(Icons.edit_outlined),
                       ),
                     )
@@ -98,7 +98,7 @@ class Setting extends StatelessWidget {
                             style: Theme.of(context).textTheme.headline6,
                           ),
                           trailing: IconButton(
-                            color: Theme.of(context).accentColor,
+                            color: Theme.of(context).colorScheme.secondary,
                             icon: const Icon(Icons.edit_location_outlined),
                             onPressed: () {
                               _showBottomSheetAddress(context);
@@ -341,7 +341,7 @@ void _showBottomSheetAddress(BuildContext context) {
             const SizedBox(height: 10),
             ContainerBn(
               title: getTranslated(context, 'Save'),
-              color: Theme.of(context).buttonColor,
+              color: Theme.of(context).colorScheme.surface,
               onPress: () {
                 if (locality != null || subLocality != null) {
                   bloc.add(EditAddress(
@@ -390,7 +390,7 @@ void _showBottomSheetUsername(BuildContext context) {
             const SizedBox(height: 10),
             ContainerBn(
               title: getTranslated(context, 'Save'),
-              color: Theme.of(context).buttonColor,
+              color: Theme.of(context).colorScheme.surface,
               onPress: () {
                 if (username != null) bloc.add(EditUsername(username!));
                 Navigator.pop(context);

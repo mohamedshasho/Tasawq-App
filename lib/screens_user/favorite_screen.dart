@@ -85,7 +85,7 @@ class FavoriteScreen extends StatelessWidget {
                             },
                             child: Icon(
                               Icons.remove,
-                              color: Theme.of(context).accentColor,
+                              color: Theme.of(context).colorScheme.secondary,
                             ),
                           ),
                         );

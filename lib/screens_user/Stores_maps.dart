@@ -63,10 +63,10 @@ class MapStoresState extends State<MapStores> {
           },
           child: Icon(
             Icons.location_searching,
-            color: Theme.of(context).accentColor,
+            color: Theme.of(context).colorScheme.secondary,
           ),
           elevation: 5,
-          backgroundColor: Theme.of(context).buttonColor,
+          backgroundColor: Theme.of(context).colorScheme.surface,
         ),
         body: StatefulBuilder(
           builder: (ctx, newSetState) {

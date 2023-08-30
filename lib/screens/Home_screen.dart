@@ -60,7 +60,7 @@ class _HomeState extends State<Home> {
                   child: Image.asset(
                     'assets/images/menu.png',
                     fit: BoxFit.fill,
-                    color: Theme.of(context).accentColor,
+                    color: Theme.of(context).colorScheme.secondary,
                   ),
                 ),
                 onTap: () {

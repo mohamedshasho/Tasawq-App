@@ -52,7 +52,7 @@ class Categories extends StatelessWidget {
               onPressed: () {
                 Navigator.pushNamed(context, NewCategory.id);
               },
-              color: Theme.of(context).buttonColor,
+              color: Theme.of(context).colorScheme.surface,
             ),
           ],
         ),

@@ -27,15 +27,16 @@ class NotificationsService {
     iOSPermission();
     const AndroidInitializationSettings initializationSettingsAndroid =
         AndroidInitializationSettings('@mipmap/ic_launcher');
-    final IOSInitializationSettings initializationSettingsIOS =
-        IOSInitializationSettings();
-    final MacOSInitializationSettings initializationSettingsMacOS =
-        MacOSInitializationSettings();
+    // final IOSInitializationSettings initializationSettingsIOS =
+    //     IOSInitializationSettings();
+    // final MacOSInitializationSettings initializationSettingsMacOS =
+    //     MacOSInitializationSettings();
     final InitializationSettings initializationSettings =
         InitializationSettings(
             android: initializationSettingsAndroid,
-            iOS: initializationSettingsIOS,
-            macOS: initializationSettingsMacOS);
+            // iOS: initializationSettingsIOS,
+            // macOS: initializationSettingsMacOS
+        );
 
     flutterLocalNotificationsPlugin.initialize(initializationSettings);
 
@@ -109,12 +110,14 @@ class NotificationsService {
 Future<void> generateSimpleNotication(String title, String msg,
     {String? type, String? id}) async {
   var androidPlatformChannelSpecifics = AndroidNotificationDetails(
-      'your channel id', 'your channel name', 'your channel description',
+      '5', 'Stories alerts',
       importance: Importance.max, priority: Priority.high);
-  var iosDetail = IOSNotificationDetails();
+  // var iosDetail = IOSNotificationDetails();
 
   var platformChannelSpecifics = NotificationDetails(
-      android: androidPlatformChannelSpecifics, iOS: iosDetail);
+      android: androidPlatformChannelSpecifics,
+      // iOS: iosDetail
+  );
   await flutterLocalNotificationsPlugin.show(
       0, title, msg, platformChannelSpecifics);
 }

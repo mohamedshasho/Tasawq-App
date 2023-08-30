@@ -51,8 +51,8 @@ class _ShowBottomSheetState extends State<ShowBottomSheet> {
                         elevation: 2,
                         color: selectLocations != null &&
                                 selectLocations == bloc.locations[index]
-                            ? Theme.of(context).accentColor
-                            : Theme.of(context).backgroundColor,
+                            ? Theme.of(context).colorScheme.secondary
+                            : Theme.of(context).colorScheme.background,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.only(
                             topLeft: Radius.circular(10),
@@ -90,8 +90,8 @@ class _ShowBottomSheetState extends State<ShowBottomSheet> {
                       child: Card(
                         color: category != null &&
                                 category == categoriesString[index]
-                            ? Theme.of(context).accentColor
-                            : Theme.of(context).backgroundColor,
+                            ? Theme.of(context).colorScheme.secondary
+                            : Theme.of(context).colorScheme.background,
                         child: SvgPicture.asset(
                           categoriesImage[index],
                           height:
@@ -137,7 +137,7 @@ class _ShowBottomSheetState extends State<ShowBottomSheet> {
               children: [
                 ContainerBn(
                   title: getTranslated(context, 'Apply'),
-                  color: Theme.of(context).buttonColor,
+                  color: Theme.of(context).colorScheme.surface,
                   onPress: () {
                     bloc.filterStores(
                         category: category,
@@ -148,7 +148,7 @@ class _ShowBottomSheetState extends State<ShowBottomSheet> {
                 ),
                 ContainerBn(
                   title: getTranslated(context, 'Cancel'),
-                  color: Theme.of(context).buttonColor,
+                  color: Theme.of(context).colorScheme.surface,
                   onPress: () {
                     Navigator.pop(context);
                   },

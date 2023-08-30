@@ -81,7 +81,7 @@ class NewProduct extends StatelessWidget {
                             },
                             icon: Icon(
                               Icons.edit,
-                              color: Theme.of(context).accentColor,
+                              color: Theme.of(context).colorScheme.secondary,
                             )),
                       ],
                     )
@@ -123,7 +123,7 @@ class NewProduct extends StatelessWidget {
                                 },
                                 icon: Icon(
                                   Icons.edit,
-                                  color: Theme.of(context).accentColor,
+                                  color: Theme.of(context).colorScheme.secondary,
                                 ),
                               ),
                             ],
@@ -223,7 +223,7 @@ class NewProduct extends StatelessWidget {
                 children: [
                   Icon(
                     Icons.location_on,
-                    color: Theme.of(context).accentColor,
+                    color: Theme.of(context).colorScheme.secondary,
                   ),
                   const SizedBox(width: 5),
                   Text(

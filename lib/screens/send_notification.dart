@@ -88,7 +88,7 @@ class _SendNotificationState extends State<SendNotification> {
               ),
               const SizedBox(height: 20),
               ContainerBn(
-                color: Theme.of(context).buttonColor,
+                color: Theme.of(context).colorScheme.surface,
                 title: getTranslated(context, 'Send'),
                 onPress: () async {
                   final form = _formKey.currentState;

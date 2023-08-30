@@ -161,7 +161,7 @@ class Products extends StatelessWidget {
                 onPressed: () {
                   Navigator.pushNamed(context, NewProduct.id);
                 },
-                color: Theme.of(context).buttonColor,
+                color: Theme.of(context).colorScheme.surface,
               ),
             ),
           ],

@@ -10,7 +10,7 @@ class SelectImageDialog extends StatefulWidget {
 
 class _SelectImageDialogState extends State<SelectImageDialog> {
   final ImagePicker _imagePicker = ImagePicker();
-  PickedFile? _file;
+  XFile? _file;
 
   @override
   Widget build(BuildContext context) {
@@ -31,13 +31,13 @@ class _SelectImageDialogState extends State<SelectImageDialog> {
                   child: Btn(
                 title: getTranslated(context, 'Camera'),
                 onPressed: () => chooseImage(ImageSource.camera),
-                color: Theme.of(context).buttonColor,
+                color: Theme.of(context).colorScheme.surface,
               )),
               Flexible(
                   child: Btn(
                 title: getTranslated(context, 'Gallery'),
                 onPressed: () => chooseImage(ImageSource.gallery),
-                color: Theme.of(context).buttonColor,
+                color: Theme.of(context).colorScheme.surface,
               )),
             ],
           ),
@@ -47,7 +47,7 @@ class _SelectImageDialogState extends State<SelectImageDialog> {
   }
 
   void chooseImage(ImageSource src) async {
-    _file = await _imagePicker.getImage(source: src, imageQuality: 50);
+    _file = await _imagePicker.pickImage(source: src, imageQuality: 50);
 //50% Image Quality - 590KB نصف الدقة
 // 25% Image Quality - 276KB حالتنا هون
 // 5% Image Quality - 211KB

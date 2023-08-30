@@ -25,7 +25,7 @@ class ListViewProduct extends StatelessWidget {
               elevation: 0.1,
               color: index.isOdd
                   ? Theme.of(context).canvasColor
-                  : Theme.of(context).accentColor,
+                  : Theme.of(context).colorScheme.secondary,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(10),
               ),

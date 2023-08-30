@@ -38,7 +38,7 @@ class BuildButton extends StatelessWidget {
                 height: height * 0.08,
                 width: width * 0.08,
                 decoration: BoxDecoration(
-                  color: Theme.of(context).buttonColor,
+                  color: Theme.of(context).colorScheme.surface,
                   borderRadius: BorderRadius.circular(10),
                   image: DecorationImage(
                     image: AssetImage('assets/images/iconbutton.jpg'),

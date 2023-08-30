@@ -55,7 +55,7 @@ class _SetMapLatLongState extends State<SetMapLatLong> {
                   right: 0,
                   child: Btn(
                     title: getTranslated(context, 'Save'),
-                    color: Theme.of(context).buttonColor,
+                    color: Theme.of(context).colorScheme.surface,
                     onPressed: () {
                       bloc.add(SetLatLong(_latLng!));
                       Navigator.pop(context);

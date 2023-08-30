@@ -37,8 +37,12 @@ class FirebaseRepo implements Repo {
       User? user = FirebaseAuth.instance.currentUser;
       Person? person = usersStore
           .firstWhereOrNull((val) => val.id == event.snapshot.key.toString());
+
+
+      print(event.snapshot.value);
       Map<String, dynamic> data =
-          Map<String, dynamic>.from(event.snapshot.value);
+          Map<String, dynamic>.fromIterable(event.snapshot.children);
+      //todo fix migrate
       Store userModel = Store.fromJson(data);
       if (person != null) person.value = userModel;
 

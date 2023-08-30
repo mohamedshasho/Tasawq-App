@@ -30,7 +30,7 @@ class GridViewProducts extends StatelessWidget {
             decoration: BoxDecoration(
               color: index.isOdd
                   ? Theme.of(context).canvasColor
-                  : Theme.of(context).accentColor,
+                  : Theme.of(context).colorScheme.secondary,
               borderRadius: BorderRadius.circular(15),
             ),
             child: Stack(

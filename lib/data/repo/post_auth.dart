@@ -31,11 +31,14 @@ class PostAuth extends PostAuthData {
       if (user != null) {
         await setPreference(EMAIL, user.email);
         DatabaseReference db =
-            FirebaseDatabase.instance.reference().child(PERSON).child(user.uid);
-
-        DataSnapshot? dataSnapshot = await db.once();
-        await setPreference(TYPE_PERSON, dataSnapshot.value[TYPE_PERSON]);
-        await setPreference(USERNAME, dataSnapshot.value[USERNAME]);
+            FirebaseDatabase.instance.ref().child(PERSON).child(user.uid);
+        DatabaseEvent databaseEvent = await db.once();
+        DataSnapshot dataSnapshot = databaseEvent.snapshot;
+        var type  = dataSnapshot.value;
+        print(type);
+        // todo fix migrate
+        // await setPreference(TYPE_PERSON, dataSnapshot.value[TYPE_PERSON]);
+        // await setPreference(USERNAME, dataSnapshot.value[USERNAME]);
         return user;
       }
       throw 'Error';
@@ -127,8 +130,9 @@ class PostAuth extends PostAuthData {
         print(user.email);
         DatabaseReference db =
             FirebaseDatabase.instance.reference().child(PERSON).child(user.uid);
-        DataSnapshot? snapshot = await db.once();
 
+        DatabaseEvent databaseEvent = await db.once();
+        DataSnapshot snapshot = databaseEvent.snapshot;
         if (snapshot.value != null) {
           await setPreference(EMAIL, user.email);
           await setPreference(USERNAME, user.displayName);
@@ -168,10 +172,11 @@ class PostAuth extends PostAuthData {
           await setPreference(EMAIL, user.email);
           await setPreference(USERNAME, user.displayName);
           DatabaseReference db = FirebaseDatabase.instance
-              .reference()
+              .ref()
               .child(PERSON)
               .child(user.uid);
-          DataSnapshot? snapshot = await db.once();
+          DatabaseEvent databaseEvent = await db.once();
+          DataSnapshot snapshot = databaseEvent.snapshot;
 
           /// once() Listens for a single value event and then stops listening.
           if (snapshot.value != null) {
